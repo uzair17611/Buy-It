@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import {AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai"
+import styles from "../../styles/Styles.js"
+import {Link} from "react-router-dom"
 
 const Login = () => {
 
@@ -65,8 +67,46 @@ const Login = () => {
                     )
                  }
                   </div>  
-                 
 
+                  <div className={`${styles.noramlFlex} justify-between`}>
+
+                    <div className={`${styles.noramlFlex}`}>
+                           <input type="checkbox" name="remember-me" id="remember-me" 
+                           className='h-4 w-4  text-blue-600  focus:ring-blue-500  border-gray-300  rounded' 
+                           
+                           />
+                           <label  htmlFor='remember-me'
+                           className='ml-2 block text-sm text-gray-900'
+                           >Remember me</label>
+                    </div>
+
+                  
+                 <div className='text-sm'>
+                  <a href="#"
+                  className='font-medium  text-blue-600 hover:text-blue-500'
+                  
+                  >
+
+                  forgot password ?
+
+                  </a>
+
+                 </div>
+               
+                 </div>
+                 <div>
+                  <button type="submit"
+                   className='group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-blue-600 text-white hover:bg-blue-700'>
+                   submit
+                  </button>
+                 </div>
+                 <div className={`${styles.noramlFlex} w-full`}>
+                    <h4>Not have any account</h4>
+                    <Link to="/Sign-up" className='text-blue-600 pl-2'>
+                      Signup
+                    </Link>
+
+                 </div>
 
 
             </form>
